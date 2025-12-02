@@ -1,0 +1,388 @@
+body {
+  background-blend-mode: hard-light;
+}
+.box {
+  border: none;
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 100px;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, red, yellow);
+  float: left;
+}
+.box2 {
+  border: none;
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 100px;
+  cursor: pointer;
+  /* background-image:radial-gradient(red ,yellow); */
+  background-image: repeating-radial-gradient(red, yellow);
+  float: left;
+  float: right;
+  font-variant: small;
+}
+.box3 {
+  border: none;
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 100px;
+  cursor: pointer;
+  background-image: repeating-conic-gradient(
+    red 10%,
+    yellow 20%,
+    green 20%,
+    red 40%
+  );
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: right; /*esse hum kisi b text ko ek dusre k aage late h*/
+  padding: 10px;
+  clear: both;
+  font-variant: small-caps;
+}
+.box22 {
+  width: 400px;
+  height: 400px;
+  margin-top: 500px;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, red, yellow),
+    url(/asset/img/corona.svg);
+  background-blend-mode: saturation;
+  text-align: center;
+  padding-top: 50px;
+}
+h2 {
+  background-color: rgb(255, 221, 1);
+  mix-blend-mode: screen;
+}
+.ok {
+  text-align: center;
+  margin-top: 20px;
+}
+.ok img {
+  clip-path: circle(40% at 50% 50%);
+  cursor: pointer;
+}
+
+.boxh {
+  width: 400px;
+  height: 200px;
+  background-color: pink;
+  transition-property: all;
+  transition-duration: 2s, 2s; /*esme hum width or heigth dono ki property set karte h*/
+  /* transition: all 2s linear; - ye shorthand property h */
+  transition-timing-function: steps(
+    4
+  ); /*ye teansition timing k liye use hota h (Linear me same speed rahati h), (Steps me hum apne animation ko kitne b steps me animate kar sakte h - esme hum start or end b de sakte h(4 start
+    ) */
+  transition-delay: 3s; /*esme hum transition ko delay(late/timing) b de sakte h*/
+}
+
+.boxh:hover {
+  width: 800px;
+  height: 400px;
+  background-color: red;
+}
+.bo {
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  margin-top: 100px;
+  background-color: cornflowerblue;
+  transition: all 0.3s linear;
+  /*transform: rotate(30deg); ye rotate karne k liye use kia jata h*/
+}
+.bo:hover {
+  transform: skew(30deg);
+  box-shadow: 0px 0px 22px rgb(244, 3, 3);
+  transform-origin: top right; /*ye rotation point ko set kane k kaam ata h*/
+}
+
+.bp {
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: rgb(191, 0, 255);
+  margin-top: 100px;
+  transition: all 10s linear;
+}
+.bp:hover {
+  transform: translate(150px);
+}
+
+.gb {
+  width: 400px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: yellow;
+  margin-top: 200px;
+  transition: all 2s linear;
+  margin-left: 200px;
+  margin-bottom: 200px;
+}
+.gb:hover {
+  transform: scale(3, 2); /*ye size ko double karta h*/
+  border-radius: 10px;
+}
+
+.btn {
+  width: 400px;
+  margin: 0 auto;
+  height: 200px;
+  background-color: chartreuse;
+  margin-bottom: 100px;
+  transition: all 2s linear;
+}
+.btn:hover {
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+.mybox {
+  height: 200px;
+  width: 200px;
+  background: #000;
+  transform: scaleY(20deg);
+}
+.mybox2 {
+  height: 200px;
+  width: 200px;
+  background: #000;
+  transform: skewX(20deg);
+}
+
+/* 3d rotation */
+
+.box-parent {
+  background-color: rgba(128, 128, 128, 0.67);
+  width: 500px;
+  height: 400px;
+  margin-top: 100px;
+  margin-left: 200px;
+  transform: rotateY(20deg);
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+/* .child{
+  background-color: red;
+  width: 498px;
+  height: 398px;
+  transition: all 2s linear;
+ 
+}
+.child:hover{
+   transform: perspective(800px) rotateX(80deg);
+   transform-origin: left bottom;
+} */
+
+/* .child{
+  background-color: red;
+  width: 498px;
+  height: 398px;
+  transition: all 2s linear;
+ 
+}
+.child:hover{
+   transform: perspective(400px) rotateZ(80deg);
+   transform-origin: left bottom;
+} */
+
+.child {
+  background-color: red;
+  width: 498px;
+  height: 398px;
+  transition: all 2s linear;
+  transform: rotateX(30deg);
+}
+.child:hover {
+  transform: rotateX(-30deg);
+  /* transform: rotateX(30deg)rotateX(-30deg); */
+  transform-origin: top;
+}
+.anim {
+  width: 200px;
+  height: 200px;
+  background-color: cadetblue;
+  margin-top: 200px;
+  margin-left: 500px;
+
+  transition: all 2s linear;
+}
+.anim {
+  animation-name: colour-change;
+  animation-duration: 15s;
+}
+/* @keyframes colour-change{
+  from{
+    background-color: green;
+    border-radius: 20px;
+  }
+  to{
+    background-color: blue;
+    border-radius: 150px;
+  }
+} */
+
+@keyframes colour-change {
+  0% {
+    background-color: green;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+  }
+  20% {
+    background-color: blue;
+    border-radius: 150px;
+    top: 0;
+    left: 500px;
+  }
+  40% {
+    background-color: aqua;
+    top: 500px;
+    left: 500px;
+  }
+  60% {
+    background-color: chartreuse;
+    top: 500px;
+    left: 0;
+  }
+  100% {
+    background-color: khaki;
+  }
+}
+
+
+
+#op{
+  filter:sepia(130%);
+  clip-path: circle(60%);
+  object-fit: cover;
+}
+
+
+.box-prnt{
+  background-image: conic-gradient( red 0deg, red 90deg, green 90deg, green 180deg,yellow 180deg, yellow 270deg,pink 270deg, pink 360deg);
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+ border-radius: 220px;
+ animation: box 2s linear; 
+}
+@keyframes  box {
+  0%{
+    transform: ;
+  }
+  
+}
+.chld{
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 150px;
+}
+.colum{
+  column-count: 5;/*ye column ko parts me devide karta h*/
+  column-gap: 100px;/*ye columns k beech gap dene k liye use hota h*/
+  column-rule-style: solid;/*ye column ko style dene k liye use hota h*/
+  column-rule-color: red;/*ye column rule ko colour dene k kaam ata h */
+  column-rule-width: 41px;/*ye column rule ko width dene k liye kaam ata h*/
+  resize: horizontal;
+}
+#pp{
+  
+  width: 100%;
+  border: 1px solid black;
+  resize: horizontal;
+  overflow: auto;
+}
+#pp *{/*ye kisi tag k andar k sabhi tags per css apply kar deta h*/
+  color: green;
+}
+#pp > u{
+  background-color: yellow;
+}
+#pp + u{/*ye p k turant baad wale u per css lagayega  */
+  background-color: orange;
+}
+
+
+
+body{
+  background-color: #000;
+}
+
+.bx{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+  animation: turn 2s linear infinite;
+  border-radius: 100px;
+}
+@keyframes turn{
+  0%{
+    transform: translateX(0%);
+    background-color: rgba(136, 255, 0, 0);
+    border: 6px solid rgb(128, 0, 0);
+     transition: all 2s linear;
+     box-shadow: 0 0 100px rgb(128, 0, 0);
+     
+  }
+  25%{
+    transform: translateX(0%);
+    background-color: rgba(137, 43, 226, 0);
+    border: 6px solid burlywood;
+     transition: all 2s linear; 
+     box-shadow: 0 0 100px burlywood;
+  }
+  50%{
+    transform: translateX(0%);
+    background-color: rgba(95, 158, 160, 0);
+    border: 6px solid rgb(135, 222, 176);
+     transition: all 2s linear;
+      box-shadow: 0 0 100px rgb(135, 222, 176);
+  }
+  100%{
+    transform: translateX(0%);
+    background-color: rgba(95, 158, 160, 0);
+    border: 6px solid rgb(128, 0, 0);
+    transition: all 2s linear;
+     box-shadow: 0 0 100px rgb(128, 0, 0);
+  }
+  
+}
+
+
+.bp{
+  width: 600px;
+  height: 600px;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid white;  
+  margin: 0 auto;
+  margin-top: 100px;
+  border-radius: 300px;
+  
+  
+}
+.tp{
+  transition: all 2s linear;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 100px;
+  transform: translateX(50%);
+}

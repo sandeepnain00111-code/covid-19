@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+            font-size: 20px;
+            background-color:beige  ;
+            color: blue;
+            flex-wrap: wrap-reverse;
+            align-items: center;
+            align-content: space-between;
+            flex-direction: row-reverse;
+        
+            
+        }
+        li{
+            background-color: aquamarine;
+            padding: 10px;
+            
+        }
+        .container{
+            
+            border: 1px solid black;
+            display: grid;
+            grid-template-columns: 80px 200px auto;
+            text-align: center;
+            padding: 10px;
+            background-color: dodgerblue;
+            column-gap: 20px;
+            row-gap: 20px;
+            justify-content: space-evenly;
+            /* align-content: space-around;  ======= Eska use rows k beech me space dene k liye kia jata h ye align item ki tarha kaam karta h  */
+            /* place-content: end space-between;  ======ye top bottom k beech me space dene k liye use kia jata h */
+        }
+        .container div{
+            padding: 20px;
+            background-color: yellow;
+            border: 1px solid blue;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <li>Home</li>
+            <li>About</li>
+            <li>Order</li>
+            <li>Contact</li>
+            <li>Help</li>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+
+
+    <div class="c2">
+      <div>5</div>
+      <div>5</div>
+      <div>5</div>
+      <div>5</div>
+      <div>5</div>
+    </div>
+</body>
+</html>
